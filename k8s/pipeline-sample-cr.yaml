@@ -4,7 +4,7 @@ items:
   kind: Deployment
   metadata:
     annotations:
-      image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"pipeline-sample:latest","namespace":"ddd"},"fieldPath":"spec.template.spec.containers[?(@.name==\"pipeline-sample\")].image"}]'
+      image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"pipeline-sample:latest","namespace":"fff"},"fieldPath":"spec.template.spec.containers[?(@.name==\"pipeline-sample\")].image"}]'
     labels:
       app: pipeline-sample
       app.kubernetes.io/component: pipeline-sample
@@ -66,7 +66,7 @@ items:
       app.kubernetes.io/name: pipeline-sample
     name: pipeline-sample
   spec:
-    host: pipeline-sample-ddd.apps.ocp4.rp.com
+    host: pipeline-sample-fff.apps.ocp4.rp.com
     port:
       targetPort: 8080
     to:
